@@ -1,0 +1,129 @@
+<!DOCTYPE>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>jQuery商品飞入购物车动画效果 </title>
+
+		<script src="js/jquery-1.7.1.js" type="text/javascript"></script>
+
+		<style type="text/css">
+			.thingsBox {
+				border: 1px solid #aaaaaa;
+				width: 300px;
+				height: 100px;
+				cursor: pointer;
+			}
+			
+			#collectBox {
+				width: 100px;
+				height: 100px;
+				border: 1px red solid;
+				z-index: 2;
+				position: fixed;
+				top: 0px;
+				right: 0px;
+				background: #a0a0a0;
+			}
+		</style>
+
+		<script type="text/javascript">
+			function MoveBox(obj) {
+				var divTop = $(obj).offset().top;
+				var divLeft = $(obj).offset().left;
+				$(obj).css({
+					"position": "absolute",
+					"z-index": "500",
+					"left": divLeft + "px",
+					"top": divTop + "px"
+				});
+				$(obj).animate({
+					"left": ($("#collectBox").offset().left - $("#collectBox").width()) + "px",
+					"top": ($(document).scrollTop() + 30) + "px",
+					"width": "100px",
+					"height": "70px"
+				}, 500, function() {
+					$(obj).animate({
+						"left": $("#collectBox").offset().left + "px",
+						"top": $("#collectBox").offset().top + "px"
+					}, 500).fadeTo(0, 0.1).hide(0);
+				});
+			}
+		</script>
+	</head>
+
+	<body>
+
+		<div style="min-height: 300px; border: 1px solid #aaaaaa; text-align: center; vertical-align: middle;
+background-color: #78adef;">
+			&nbsp;站个位置
+			<!--<input type="button" name="name" value="重来开始" onclick="location.reload()" />--></div>
+		<br />
+		<br />
+		<br />
+		<div>
+			请点击：</div>
+		<br />
+		<div onClick="MoveBox(this)" class="thingsBox" style="background: #ff0000;">
+			1111<img src="images/111_.jpg" alt="" />
+		</div>
+		<div onClick="MoveBox(this)" class="thingsBox" style="background: #00ff00;">
+			222<img src="images/232_.jpg" alt="" />
+		</div>
+		<div onClick="MoveBox(this)" class="thingsBox" style="background: #0000ff;">
+			333<img src="images/657_.jpg" alt="" />
+		</div>
+		<div onClick="MoveBox(this)" class="thingsBox" style="background: #ffff00;">
+			444<img src="images/184_.jpg" alt="" />
+		</div>
+		<div onClick="MoveBox(this)" class="thingsBox" style="background: #abefab;">
+			555<img src="images/1048_.jpg" alt="" />
+		</div>
+		<div onClick="MoveBox(this)" class="thingsBox" style="background: #ab2323;">
+			666<img src="images/363_.jpg" alt="" />
+		</div>
+		<div onClick="MoveBox(this)" class="thingsBox" style="background: #dfadf5;">
+			777<img src="images/1047_.jpg" alt="" />
+		</div>
+		<div onClick="MoveBox(this)" class="thingsBox" style="background: #56abab;">
+			888<img src="images/221_.jpg" alt="" />
+		</div>
+		<div onClick="MoveBox(this)" class="thingsBox" style="background: #e2f2a3;">
+			999<img src="images/777_.jpg" alt="" />
+		</div>
+		<div onClick="MoveBox(this)" class="thingsBox" style="background: #ee8d2d;">
+			aaa<img src="images/888_.jpg" alt="" />
+		</div>
+		<div onClick="MoveBox(this)" class="thingsBox" style="background: #943185;">
+			bbb<img src="images/32919_.jpg" alt="" />
+		</div>
+		<div onClick="MoveBox(this)" class="thingsBox" style="background: #158425;">
+			ccc<img src="images/34329_.jpg" alt="" />
+		</div>
+		<div onClick="MoveBox(this)" class="thingsBox" style="background: #93ad02;">
+			ddd<img src="images/1050_.jpg" alt="" />
+		</div>
+		<div onClick="MoveBox(this)" class="thingsBox" style="background: #654987;">
+			eee<img src="images/1051_.jpg" alt="" />
+		</div>
+		<div onClick="MoveBox(this)" class="thingsBox" style="background: #0000ff;">
+			fff<img src="images/1799_.jpg" alt="" />
+		</div>
+		<div onClick="MoveBox(this)" class="thingsBox" style="background: #123456;">
+			hhh<img src="images/1053_.jpg" alt="" />
+		</div>
+		<div onClick="MoveBox(this)" class="thingsBox" style="background: #456789;">
+			ggg<img src="images/139_.jpg" alt="" />
+		</div>
+		<div onClick="MoveBox(this)" class="thingsBox" style="background: #963258;">
+			jjj<img src="images/301_.jpg" alt="" />
+		</div>
+		<div onClick="MoveBox(this)" class="thingsBox" style="background: #741258;">
+			kkk<img src="images/407_.jpg" alt="" />
+		</div>
+
+		<img id="collectBox" src="images/123609.gif" alt="" />
+	
+	</body>
+
+</html>

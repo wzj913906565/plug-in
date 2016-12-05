@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>个人介绍网页演示页面-1</title>
+<link rel="stylesheet" type="text/css" href="http://ws234.com/yanshi/150/1/images/style.css" />
+<script src="http://ws234.com/yanshi/150/1/images/move.js" type="text/javascript"></script>
+<script src="http://ws234.com/yanshi/150/1/images/index.js" type="text/javascript"></script>
+</head>
+<body>
+    <div class="wrapper">
+        
+    </div>
+
+    <div id="pxs_container" class="pxs_container">
+        <div class="pxs_bg">
+            <div class="pxs_bg1"></div>
+            <div class="pxs_bg2"></div>
+            <div class="pxs_bg3"></div>
+        </div>
+        <div class="pxs_loading">Loading images...</div>
+        <div class="pxs_slider_wrapper">
+            <ul class="pxs_slider">
+                <li><img src="http://ws234.com/yanshi/150/1/images/1.jpg" alt="First Image" /></li>
+                <li><img src="http://ws234.com/yanshi/150/1/images/2.jpg" alt="Second Image" /></li>
+                <li><img src="http://ws234.com/yanshi/150/1/images/3.jpg" alt="Third Image" /></li>
+                <li><img src="http://ws234.com/yanshi/150/1/images/4.jpg" alt="Forth Image" /></li>
+                <li><img src="http://ws234.com/yanshi/150/1/images/5.jpg" alt="Fifth Image" /></li>
+                <li><img src="http://ws234.com/yanshi/150/1/images/6.jpg" alt="Sixth Image" /></li>
+            </ul>
+            <div class="pxs_navigation">
+                <span class="pxs_next"></span>
+                <span class="pxs_prev"></span>
+            </div>
+            <ul class="pxs_thumbnails">
+                <li><img src="http://ws234.com/yanshi/150/1/images/thumbs/1.jpg" alt="First Image" /></li>
+                <li><img src="http://ws234.com/yanshi/150/1/images/thumbs/2.jpg" alt="Second Image" /></li>
+                <li><img src="http://ws234.com/yanshi/150/1/images/thumbs/3.jpg" alt="Third Image" /></li>
+                <li><img src="http://ws234.com/yanshi/150/1/images/thumbs/4.jpg" alt="Forth Image" /></li>
+                <li><img src="http://ws234.com/yanshi/150/1/images/thumbs/5.jpg" alt="Fifth Image" /></li>
+                <li><img src="http://ws234.com/yanshi/150/1/images/thumbs/6.jpg" alt="Sixth Image" /></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+<div style="text-align:center;clear:both;">
+</div>
+<script>
+var oLoad = getByClass(document.body, 'pxs_loading')[0];
+var oImgBox = getByClass(document.body,'pxs_slider_wrapper')[0];
+//var oEvent=ev||event;
+//var obj=oEvent.srcElement||oEvent.target;
+var imgs = document.getElementsByTagName('img');
+for(var i=0;i<imgs.length;i++)
+{
+	imgs[i].onload = function()
+	{
+		oLoad.style.display = 'none';
+	}
+	oImgBox.style.display = 'block';
+}
+</script>    
+<audio autoplay="autopaly">
+<source src="http://sc.111ttt.com/up/mp3/6174/4C47B13C6631FF7A772B61D90A18BE84.mp3" type="audio/mp3" />
+</audio>
+</body>
+<!--百度统计-->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?f4a9140509a9470a022f0a26664758df";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!--end 百度统计-->
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery版页面无刷新翻页插件</title>
+	<link rel="stylesheet" href="css/jquery.page.css">
+</head>
+<body>
+
+	<!-- 代码部分begin -->
+	<div id="page"></div>
+	<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/jquery.page.js"></script>
+	<script>
+		$(function(){
+			$("#page").Page({
+	        	totalPages: 9,//分页总数
+	        	liNums: 7,//分页的数字按钮数(建议取奇数)
+	        	activeClass: 'activP', //active 类样式定义
+	        	callBack : function(page){
+	          		//console.log(page)
+	          	}
+	      	});
+		})
+	</script>
+	<!-- 代码部分end -->
+
+</body>
+</html>

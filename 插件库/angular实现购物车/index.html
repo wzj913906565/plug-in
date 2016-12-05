@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="js/jquery1.12.3.js"></script>
+    <script src="angular/angular.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <script src="js/filter.js"></script>
+</head>
+<body  ng-app="myapp">
+    <div ng-controller="car">
+        <h2 ng-show="person.length==0" class="text-center">购物车为空</h2>
+        <form class="form-search" ng-show="person.length!=0">
+            <input type="text" class="input-medium search-query" ng-model="search">
+        </form>
+        <table class="table table-bordered text-center" ng-show="person.length!=0">
+            <tr class="success">
+                <th class="text-center">商品名字</th>
+                <th class="text-center">商品价格
+                    <div ng-class="{'dropup':OrderType}"  ng-click="order('price')">
+                    <!--<div ng-class="{false:'dropup'}[OrderType]"  ng-click="order('price')">-->
+                        <span class="caret"></span>
+                    </div>
+                </th>
+                <th class="text-center">商品折扣</th>
+                <th class="text-center">尚品数量</th>
+                <th class="text-center">商品总价</th>
+                <th class="text-center">操作</th>
+            </tr>
+            <tr class="success" ng-repeat="item in person|filter:search|orderBy:OrderType+type">
+                <td ng-bind="item.name"></td>
+                <td ng-bind="item.price|currency:'￥'"></td>
+                <td ng-bind="item.price*item.zk|currency:'￥'"></td>
+                <td>
+                <div class="input-append">
+                    <button class="btn" type="button" ng-click="jian(item.id)">-</button>
+                    <input class="span2" id="appendedInputButtons" type="text" ng-model="item.num">
+                    <button class="btn" type="button" ng-click="jia(item.id)">+</button>
+                </div>
+                </td>
+                <td ng-bind="item.num*item.price*item.zk|currency:'￥'"></td>
+                <td><button class="btn btn-danger" ng-click="del(item.id)">删除</button></td>
+            </tr>
+            <tr class="success">
+                <td>总计</td>
+                <td>商品总数</td>
+                <td ng-bind="nums()"></td>
+                <td>商品总价</td>
+                <td ng-bind="prices()|currency:'￥'"></td>
+                <td><button class="btn btn-danger" ng-click="clear()">清空购物车</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+angular.module("myapp",["ourfilter"])
+    .controller("car",["$scope","$filter",function ($scope,$filter) {
+        //$scope.person="张三"
+        $scope.person=[
+            {   id:1,
+                name:"帽子",
+                price:900,
+                zk:0.8,
+                num:5},
+            {
+                id:2,
+                name:"衣服",
+                price:600,
+                zk:0.8,
+                num:5},
+            {
+                id:3,
+                name:"帽子",
+                price:800,
+                zk:0.8,
+                num:5},
+            {
+                id:4,
+                name:"帽子",
+                price:700,
+                zk:0.8,
+                num:5},
+            {
+                id:5,
+                name:"帽子",
+                price:1000,
+                zk:0.8,
+                num:5}
+        ]
+        console.log($filter("json")($scope.person))
+        //console.log(silce(1,2)($scope.person))
+        $scope.nums=function (){
+            var nums=0;
+            for(var i=0;i<$scope.person.length;i++){
+                if(parseInt($scope.person[i].num)&&parseInt($scope.person[i].num)>0){
+                    num=parseInt($scope.person[i].num);
+                }else{
+                    $scope.person[i].num="";
+                    num=0;
+                }
+                nums+=num;
+            }
+            return nums;
+        }
+        $scope.prices=function (){
+            var prices=0;
+            for(var i=0;i<$scope.person.length;i++){
+                prices+=$scope.person[i].num*$scope.person[i].price*$scope.person[i].zk;
+            }
+            return prices;
+        }
+        $scope.del=function (id){
+            angular.forEach($scope.person,function (val,index) {
+                if(id==val.id){
+                    $scope.person.splice(index,1)
+                }
+            })
+        }
+        $scope.jia=function (id){
+            angular.forEach($scope.person,function (val,index) {
+                if(id==val.id){
+                    val.num=parseInt(val.num)+1;
+                }
+            })
+        }
+        $scope.jian=function (id){
+            angular.forEach($scope.person,function (val,index) {
+                if(id==val.id){
+                    val.num=parseInt(val.num)-1;
+                }
+            });
+        }
+        $scope.clear=function () {
+            $scope.person=[]
+        }
+        $scope.type="";
+        $scope.OrderType="";
+        $scope.order=function (type) {
+            $scope.type=type;
+            if($scope.OrderType=="-"){
+                $scope.OrderType=""
+            }else{
+                $scope.OrderType="-"
+            }
+        }
+    }])
+</script>
+</html>

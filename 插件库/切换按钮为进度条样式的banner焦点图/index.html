@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>切换按钮为进度条样式的banner焦点图</title>
+<style type="text/css">
+*{ margin:0; padding:0;}
+#wrapper{width:576px;height:335px;margin:40px auto;background:#fafafa;}
+#carousel{width:576px;height:335px;}
+#carousel img{border:1px solid #ccc;display:block;padding:10px;float:left; background:url(http://www.lanrenzhijia.com/demo/images/loading.gif) no-repeat center center;}
+#pager{margin-top:5px;width:600px;}
+#pager a, #pager span{display:block;height:10px;}
+#pager a{border:1px solid #ccc;width:140px;margin-right:3px;float:left;}
+#pager a:hover{border-color:#999;}
+#pager span{background-color:#ccc;width:0px;}
+</style>
+</head>
+<body>
+<!-- 代码部分begin -->
+<div id="wrapper">
+	<div id="carousel">
+		<img src="http://demo.lanrenzhijia.com/2014/banner1029/images/cars.jpg" width="554" height="313" />
+		<img src="http://demo.lanrenzhijia.com/2014/banner1029/images/rat.jpg" width="554" height="313" />
+		<img src="http://demo.lanrenzhijia.com/2014/banner1029/images/toystory.jpg" width="554" height="313" />
+		<img src="http://demo.lanrenzhijia.com/2014/banner1029/images/walle.jpg" width="554" height="313" class="last" />
+	</div>
+	<div id="pager">
+		<a href="http://www.lanrenzhijia.com"><span></span></a>
+		<a href="http://www.lanrenzhijia.com"><span></span></a>
+		<a href="http://www.lanrenzhijia.com"><span></span></a>
+		<a href="http://www.lanrenzhijia.com"><span></span></a>
+	</div>
+</div>
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>
+<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.carouFredSel-6.0.4-packed.js"></script>
+<script>
+function prevTimers() {
+	return allTimers().slice( 0,$('#pager a.selected').index());
+}
+function allTimers() {
+	return $('#pager a span');
+}
+
+$(function() {
+	$('#carousel').carouFredSel({
+		items: 1,
+		auto: {
+			pauseOnHover: 'resume',
+			progress: {
+				bar: '#pager a:first span'
+			}
+		},
+		scroll: {
+			fx: 'crossfade',
+			duration:300,
+			timeoutDuration:5000,
+			onAfter: function() {
+				allTimers().stop().width( 0 );
+				prevTimers().width( 140 );
+				$(this).trigger('configuration',[ 'auto.progress.bar','#pager a.selected span']);
+			}
+		},
+		pagination: {
+			container: '#pager',
+			anchorBuilder: false
+		}
+	});
+});
+</script>
+<!-- 代码部分end -->
+</body>
+</html>

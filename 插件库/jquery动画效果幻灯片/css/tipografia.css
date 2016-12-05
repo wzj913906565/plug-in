@@ -1,0 +1,473 @@
+@charset "utf-8";
+
+/* Código Digital - Estúdio de Web Design de Fortaleza Ceará */
+
+
+@font-face {
+    font-family: 'AllerBold';
+    src: url('../fontes/aller_bd-webfont.eot');
+    src: url('../fontes/aller_bd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/aller_bd-webfont.woff') format('woff'),
+         url('../fontes/aller_bd-webfont.ttf') format('truetype'),
+         url('../fontes/aller_bd-webfont.svg#AllerBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AllerBoldItalic';
+    src: url('../fontes/aller_bdit-webfont.eot');
+    src: url('../fontes/aller_bdit-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/aller_bdit-webfont.woff') format('woff'),
+         url('../fontes/aller_bdit-webfont.ttf') format('truetype'),
+         url('../fontes/aller_bdit-webfont.svg#AllerBoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AllerItalic';
+    src: url('../fontes/aller_it-webfont.eot');
+    src: url('../fontes/aller_it-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/aller_it-webfont.woff') format('woff'),
+         url('../fontes/aller_it-webfont.ttf') format('truetype'),
+         url('../fontes/aller_it-webfont.svg#AllerItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'AllerLightRegular';
+    src: url('../fontes/aller_lt-webfont.eot');
+    src: url('../fontes/aller_lt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/aller_lt-webfont.woff') format('woff'),
+         url('../fontes/aller_lt-webfont.ttf') format('truetype'),
+         url('../fontes/aller_lt-webfont.svg#AllerLightRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AllerLightItalic';
+    src: url('../fontes/aller_ltit-webfont.eot');
+    src: url('../fontes/aller_ltit-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/aller_ltit-webfont.woff') format('woff'),
+         url('../fontes/aller_ltit-webfont.ttf') format('truetype'),
+         url('../fontes/aller_ltit-webfont.svg#AllerLightItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AllerRegular';
+    src: url('../fontes/aller_rg-webfont.eot');
+    src: url('../fontes/aller_rg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/aller_rg-webfont.woff') format('woff'),
+         url('../fontes/aller_rg-webfont.ttf') format('truetype'),
+         url('../fontes/aller_rg-webfont.svg#AllerRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AllerDisplayRegular';
+    src: url('../fontes/allerdisplay-webfont.eot');
+    src: url('../fontes/allerdisplay-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/allerdisplay-webfont.woff') format('woff'),
+         url('../fontes/allerdisplay-webfont.ttf') format('truetype'),
+         url('../fontes/allerdisplay-webfont.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanAltBla';
+    src: url('../fontes/VistaSanAltBla.eot');
+    src: url('../fontes/VistaSanAltBla.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanAltBla.woff') format('woff'),
+         url('../fontes/VistaSanAltBla.ttf') format('truetype'),
+         url('../fontes/VistaSanAltBla.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanAltBlaIta';
+    src: url('../fontes/VistaSanAltBlaIta.eot');
+    src: url('../fontes/VistaSanAltBlaIta.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanAltBlaIta.woff') format('woff'),
+         url('../fontes/VistaSanAltBlaIta.ttf') format('truetype'),
+         url('../fontes/VistaSanAltBlaIta.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'VistaSanAltBol';
+    src: url('../fontes/VistaSanAltBol.eot');
+    src: url('../fontes/VistaSanAltBol.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanAltBol.woff') format('woff'),
+         url('../fontes/VistaSanAltBol.ttf') format('truetype'),
+         url('../fontes/VistaSanAltBol.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'VistaSanAltBolIta';
+    src: url('../fontes/VistaSanAltBolIta.eot');
+    src: url('../fontes/VistaSanAltBolIta.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanAltBolIta.woff') format('woff'),
+         url('../fontes/VistaSanAltBolIta.ttf') format('truetype'),
+         url('../fontes/VistaSanAltBolIta.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanAltBoo';
+    src: url('../fontes/VistaSanAltBoo.eot');
+    src: url('../fontes/VistaSanAltBoo.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanAltBoo.woff') format('woff'),
+         url('../fontes/VistaSanAltBoo.ttf') format('truetype'),
+         url('../fontes/VistaSanAltBoo.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanAltBooIta';
+    src: url('../fontes/VistaSanAltBooIta.eot');
+    src: url('../fontes/VistaSanAltBooIta.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanAltBooIta.woff') format('woff'),
+         url('../fontes/VistaSanAltBooIta.ttf') format('truetype'),
+         url('../fontes/VistaSanAltBooIta.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanAltLig';
+    src: url('../fontes/VistaSanAltLig.eot');
+    src: url('../fontes/VistaSanAltLig.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanAltLig.woff') format('woff'),
+         url('../fontes/VistaSanAltLig.ttf') format('truetype'),
+         url('../fontes/VistaSanAltLig.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanAltLigIta';
+    src: url('../fontes/VistaSanAltLigIta.eot');
+    src: url('../fontes/VistaSanAltLigIta.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanAltLigIta.woff') format('woff'),
+         url('../fontes/VistaSanAltLigIta.ttf') format('truetype'),
+         url('../fontes/VistaSanAltLigIta.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanAltMed';
+    src: url('../fontes/VistaSanAltMed.eot');
+    src: url('../fontes/VistaSanAltMed.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanAltMed.woff') format('woff'),
+         url('../fontes/VistaSanAltMed.ttf') format('truetype'),
+         url('../fontes/VistaSanAltMed.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanAltMedIta';
+    src: url('../fontes/VistaSanAltMedIta.eot');
+    src: url('../fontes/VistaSanAltMedIta.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanAltMedIta.woff') format('woff'),
+         url('../fontes/VistaSanAltMedIta.ttf') format('truetype'),
+         url('../fontes/VistaSanAltMedIta.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanAltReg';
+    src: url('../fontes/VistaSanAltReg.eot');
+    src: url('../fontes/VistaSanAltReg.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanAltReg.woff') format('woff'),
+         url('../fontes/VistaSanAltReg.ttf') format('truetype'),
+         url('../fontes/VistaSanAltReg.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanAltRegIta';
+    src: url('../fontes/VistaSanAltRegIta.eot');
+    src: url('../fontes/VistaSanAltRegIta.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanAltRegIta.woff') format('woff'),
+         url('../fontes/VistaSanAltRegIta.ttf') format('truetype'),
+         url('../fontes/VistaSanAltRegIta.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanBla';
+    src: url('../fontes/VistaSanBla.eot');
+    src: url('../fontes/VistaSanBla.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanBla.woff') format('woff'),
+         url('../fontes/VistaSanBla.ttf') format('truetype'),
+         url('../fontes/VistaSanBla.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanBlaIta';
+    src: url('../fontes/VistaSanBlaIta.eot');
+    src: url('../fontes/VistaSanBlaIta.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanBlaIta.woff') format('woff'),
+         url('../fontes/VistaSanBlaIta.ttf') format('truetype'),
+         url('../fontes/VistaSanBlaIta.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanBol';
+    src: url('../fontes/VistaSanBol.eot');
+    src: url('../fontes/VistaSanBol.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanBol.woff') format('woff'),
+         url('../fontes/VistaSanBol.ttf') format('truetype'),
+         url('../fontes/VistaSanBol.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanBolIta';
+    src: url('../fontes/VistaSanBolIta.eot');
+    src: url('../fontes/VistaSanBolIta.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanBolIta.woff') format('woff'),
+         url('../fontes/VistaSanBolIta.ttf') format('truetype'),
+         url('../fontes/VistaSanBolIta.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'VistaSanBoo';
+	src: url('../fonts/VistaSanBoo.eot');
+	src: local('?'), url('../fonts/VistaSanBoo.woff') format('woff'), url('../fonts/VistaSanBoo.ttf') format('truetype'), url('../fonts/VistaSanBoo.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanBooIta';
+    src: url('../fontes/VistaSanBooIta.eot');
+    src: url('../fontes/VistaSanBooIta.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanBooIta.woff') format('woff'),
+         url('../fontes/VistaSanBooIta.ttf') format('truetype'),
+         url('../fontes/VistaSanBooIta.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'VistaSanLig';
+	src: url('../fonts/VistaSanLig.eot');
+	src: local('?'), url('../fonts/VistaSanLig.woff') format('woff'), url('../fonts/VistaSanLig.ttf') format('truetype'), url('../fonts/VistaSanLig.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanLigIta';
+    src: url('../fontes/VistaSanLigIta.eot');
+    src: url('../fontes/VistaSanLigIta.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanLigIta.woff') format('woff'),
+         url('../fontes/VistaSanLigIta.ttf') format('truetype'),
+         url('../fontes/VistaSanLigIta.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'VistaSanMed';
+	src: url('../fonts/VistaSanMed.eot');
+	src: local('?'), url('../fonts/VistaSanMed.woff') format('woff'), url('../fonts/VistaSanMed.ttf') format('truetype'), url('../fonts/VistaSanMed.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanMedIta';
+    src: url('../fontes/VistaSanMedIta.eot');
+    src: url('../fontes/VistaSanMedIta.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanMedIta.woff') format('woff'),
+         url('../fontes/VistaSanMedIta.ttf') format('truetype'),
+         url('../fontes/VistaSanMedIta.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanReg';
+    src: url('../fontes/VistaSanReg.eot');
+    src: url('../fontes/VistaSanReg.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanReg.woff') format('woff'),
+         url('../fontes/VistaSanReg.ttf') format('truetype'),
+         url('../fontes/VistaSanReg.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanReg';
+    src: url('../fontes/VistaSanRegIta.eot');
+    src: url('../fontes/VistaSanRegIta.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanRegIta.woff') format('woff'),
+         url('../fontes/VistaSanRegIta.ttf') format('truetype'),
+         url('../fontes/VistaSanRegIta.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanSCBla';
+    src: url('../fontes/VistaSanSCBla.eot');
+    src: url('../fontes/VistaSanSCBla.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanSCBla.woff') format('woff'),
+         url('../fontes/VistaSanSCBla.ttf') format('truetype'),
+         url('../fontes/VistaSanSCBla.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanSCBlaIta';
+    src: url('../fontes/VistaSanSCBlaIta.eot');
+    src: url('../fontes/VistaSanSCBlaIta.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanSCBlaIta.woff') format('woff'),
+         url('../fontes/VistaSanSCBlaIta.ttf') format('truetype'),
+         url('../fontes/VistaSanSCBlaIta.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanSCBol';
+    src: url('../fontes/VistaSanSCBol.eot');
+    src: url('../fontes/VistaSanSCBol.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanSCBol.woff') format('woff'),
+         url('../fontes/VistaSanSCBol.ttf') format('truetype'),
+         url('../fontes/VistaSanSCBol.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanSCBolIta';
+    src: url('../fontes/VistaSanSCBolIta.eot');
+    src: url('../fontes/VistaSanSCBolIta.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanSCBolIta.woff') format('woff'),
+         url('../fontes/VistaSanSCBolIta.ttf') format('truetype'),
+         url('../fontes/VistaSanSCBolIta.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanSCBoo';
+    src: url('../fontes/VistaSanSCBoo.eot');
+    src: url('../fontes/VistaSanSCBoo.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanSCBoo.woff') format('woff'),
+         url('../fontes/VistaSanSCBoo.ttf') format('truetype'),
+         url('../fontes/VistaSanSCBoo.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanSCBooIta';
+    src: url('../fontes/VistaSanSCBooIta.eot');
+    src: url('../fontes/VistaSanSCBooIta.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanSCBooIta.woff') format('woff'),
+         url('../fontes/VistaSanSCBooIta.ttf') format('truetype'),
+         url('../fontes/VistaSanSCBooIta.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanSCLig';
+    src: url('../fontes/VistaSanSCLig.eot');
+    src: url('../fontes/VistaSanSCLig.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanSCLig.woff') format('woff'),
+         url('../fontes/VistaSanSCLig.ttf') format('truetype'),
+         url('../fontes/VistaSanSCLig.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanSCLigIta';
+    src: url('../fontes/VistaSanSCLigIta.eot');
+    src: url('../fontes/VistaSanSCLigIta.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanSCLigIta.woff') format('woff'),
+         url('../fontes/VistaSanSCLigIta.ttf') format('truetype'),
+         url('../fontes/VistaSanSCLigIta.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanSCMed';
+    src: url('../fontes/VistaSanSCMed.eot');
+    src: url('../fontes/VistaSanSCMed.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanSCMed.woff') format('woff'),
+         url('../fontes/VistaSanSCMed.ttf') format('truetype'),
+         url('../fontes/VistaSanSCMed.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanSCMedIta';
+    src: url('../fontes/VistaSanSCMedIta.eot');
+    src: url('../fontes/VistaSanSCMedIta.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanSCMedIta.woff') format('woff'),
+         url('../fontes/VistaSanSCMedIta.ttf') format('truetype'),
+         url('../fontes/VistaSanSCMedIta.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanSCReg';
+    src: url('../fontes/VistaSanSCReg.eot');
+    src: url('../fontes/VistaSanSCReg.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanSCReg.woff') format('woff'),
+         url('../fontes/VistaSanSCReg.ttf') format('truetype'),
+         url('../fontes/VistaSanSCReg.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VistaSanSCRegIta';
+    src: url('../fontes/VistaSanSCRegIta.eot');
+    src: url('../fontes/VistaSanSCRegIta.eot?#iefix') format('embedded-opentype'),
+         url('../fontes/VistaSanSCRegIta.woff') format('woff'),
+         url('../fontes/VistaSanSCRegIta.ttf') format('truetype'),
+         url('../fontes/VistaSanSCRegIta.svg#AllerDisplayRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
